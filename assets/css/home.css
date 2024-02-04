@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yatra One", sans-serif;
+}
+body{
+    min-height: 125vh;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2% );
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(3px);
+}
+
+header.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add the shadow here */
+
+}
+
+img.logo{
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav.navbar a{
+    position: relative;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+nav.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: .3s;
+}
+
+nav.navbar a:hover::before{
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* To maintain the aspect ratio */
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.site-name {
+    margin: 0;
+}
+
+.content-image {
+    width: 100%; /* Make the image fill the width of the content area */
+    height: 100vh; /* Maintain the aspect ratio */
+    margin-top: 0px;
+}
+
+.login-button {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.signup-button {
+    background-color: #3498db;
+    color: #fff;
+    border: 2px solid #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #fff;
+    color: #3498db;
+}
+
+.signup-button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.image-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px; /* Adjust the padding as needed */
+    color: #fff;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    margin-top: -200px;
+    margin-bottom: 430vh;
+}
+
+.large-text {
+    font-size: 50px; /* Adjust the font size as needed */
+    font-weight: bold;
+    margin-right: 90vh;
+    margin-left: 70px; 
+}
+
+.small-para {
+    font-size: 18px; /* Adjust the font size as needed */
+    margin-bottom: 40vh;
+    margin-right: 90vh;
+    margin-left: 70px; 
+}
+
+.button-container {
+    margin-top: 10px; /* Adjust margin-top as needed for spacing between text and button */
+}
+
+.view-plans-btn {
+    display: block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 180px;
+    text-align: center;
+    margin-top: -255px;
+    margin-left: 70px;
+}
+
+.view-plans-btn:hover {
+    background-color: #267bb5; /* Adjust the hover color as needed */
+}
+.video-container {
+    margin-top: -200px;
+    text-align: left;
+    margin-left: 70px;
+    display: flex; 
+}
+
+.play-button {
+    width: 30px; /* Adjust the size of the play button as needed */
+    height: auto;
+}
+
+.watch-video-text {
+    margin-top: 5px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.watch-video-text a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.paragraph-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px; /* Adjust gap as needed for spacing between items */
+    background-color: #fff;
+    padding: 70px;
+}
+
+.paragraph-item {
+    display: flex;
+    align-items: center;
+}
+
+.paragraph-logo {
+    width:95px; /* Adjust the size of the logos as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+.how-it-works-heading{
+    text-align: center ; 
+    font-size: 27px;
+    margin-bottom: -50px;
+}
+.how-it-works-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns with equal width */
+    gap: 20px; /* Adjust the gap between items */
+    margin-top:     20px;
+    justify-content: center; /* Center the items horizontally */
+    margin: 130px;
+}
+
+.how-it-works-item {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.how-it-works-image {
+    width: 100%; /* Adjust the size of the image within the box */
+    height: 300px;
+    max-width: 100%;
+    margin-bottom: 10px; /* Adjust spacing between image and text */
+}
+
+.how-it-works-text {
+    margin-top: 10px;
+}
+
+/* Updated CSS */
+.another-video-container {
+    margin-top: -60px; /* Adjust margin-top as needed */
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center the item horizontally */
+    margin-bottom: 80px;
+}
+
+.another-video-container img {
+    width: 30px;
+    height: auto;
+}
+
+/* Updated CSS with black color for the text */
+.another-video-container .watch-video-text a {
+    margin-top: 5px;
+    font-weight: bold;
+    margin-left: 5px;
+    color: black;/* Set the color to black */
+}
+
+/* ... (previous CSS content) ... */
+
+.best-meal-kit-section {
+    padding: 50px;
+    background-color: #F5EEE6;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.best-meal-kit-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 130px;
+}
+
+.best-meal-kit-item {
+    text-align: center;
+}
+
+.best-meal-kit-image {
+    width: 100%;
+    height: 300px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.best-meal-kit-text {
+    font-weight:lighter;
+}
+
+.image-heading {
+    font-size: 21px;
+    margin-bottom: 10px;
+    color: #333;
+
+}
+
+.menu-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.menu-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-item {
+    text-align: center;
+    border: 2px solid #EAD196; /* Add border color */
+    padding: 0; /* Add padding to the container */
+    margin: 80px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 60%;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+.menu-item-heading {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.menu-item-description {
+    color: #666;
+}
+
+.price-btn {
+    display: inline-block;
+    background-color: #fff; /* White background color */
+    color: #3498db; /* Blue text color */
+    padding: 8px 15px;
+    border: 2px solid #3498db; /* Blue border color */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    bottom: 0; /* Adjust the distance from the bottom as needed */
+    left: 10px; /* Adjust the distance from the left as needed */
+}
+
+.price-btn:hover {
+    background-color: #3498db; /* Hover background color */
+    color: #fff; /* Hover text color */
+}
+
+
+.footer{
+    background:#000;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+    
+    
